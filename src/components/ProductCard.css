@@ -1,0 +1,17 @@
+.wishlist-active {
+  background: #fff0f0;
+  color: #e53935;
+}
+
+.wishlist-active:hover {
+  background: #e53935;
+  color: white;
+}
+
+.catalogue-cart.added {
+  background: #388e3c;
+}
+
+.catalogue-cart.added:hover {
+  background: #2e7d32;
+}

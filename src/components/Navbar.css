@@ -1,0 +1,154 @@
+
+/* Search bar */
+.shop-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 180px;
+  max-width: 650px;
+  padding: 5px 7px 5px 14px;
+  border: 1px solid #e1e5ee;
+  border-radius: 8px;
+  background: #f5f7fb;
+  color: #555;
+}
+
+.shop-search input {
+  width: 100%;
+  min-width: 0;
+  padding: 10px 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #222;
+  font-size: 14px;
+}
+
+.search-submit {
+  flex-shrink: 0;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #2874f0;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.search-submit:hover {
+  background: #1558c0;
+}
+
+.search-clear {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Small category shortcuts centered on the page */
+.category-navbar {
+  width: 100%;
+  padding: 12px 16px;
+  background: #fff;
+  border-bottom: 1px solid #e8eaf0;
+}
+
+.category-navbar-inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.category-shortcut {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  min-width: 74px;
+  padding: 5px;
+  border: none;
+  background: transparent;
+  color: #333;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.category-shortcut:hover {
+  color: #2874f0;
+  transform: translateY(-2px);
+}
+
+.category-shortcut-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #eef4ff;
+  color: #2874f0;
+}
+
+.category-shortcut:hover .category-shortcut-icon {
+  background: #dce9ff;
+}
+
+.cart-icon-wrap {
+  position: relative;
+  display: inline-flex;
+}
+
+.cart-count {
+  position: absolute;
+  top: -9px;
+  right: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: 50%;
+  background: #e53935;
+  color: white;
+  font-size: 11px;
+}
+
+@media (max-width: 800px) {
+  .shop-navbar-container {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .shop-search {
+    order: 3;
+    flex-basis: 100%;
+    max-width: none;
+  }
+
+  .shop-actions {
+    gap: 10px;
+  }
+
+  .feedback-action {
+    display: none;
+  }
+
+  .category-navbar-inner {
+    gap: 12px;
+  }
+
+  .category-shortcut {
+    min-width: 65px;
+  }
+}

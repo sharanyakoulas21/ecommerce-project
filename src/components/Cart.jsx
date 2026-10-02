@@ -1,47 +1,183 @@
-function Cart({ cart, onRemove, onIncrease, onDecrease }) {
+import React from "react";
+
+function Cart({
+  cart,
+  onIncrease,
+  onDecrease,
+  onRemove,
+  onCheckout,
+}) {
   const total = cart.reduce(
-    (sum, item) => sum + item.price * item.quantity,
+    (sum, item) => sum + Number(item.price) * item.quantity,
     0
   );
 
+  const itemCount = cart.reduce(
+    (sum, item) => sum + item.quantity,
+    0
+  );
+
+  if (cart.length === 0) {
+    return (
+      <section className="cart-section">
+        <div className="cart-header">
+          <div>
+            <h2>Shopping Cart</h2>
+            <p>Your selected products will appear here.</p>
+          </div>
+        </div>
+
+        <div className="empty-cart">
+          <div className="empty-cart-icon">🛒</div>
+
+          <h3>Your cart is empty</h3>
+
+          <p>
+            Looks like you haven't added anything to your cart yet.
+          </p>
+        </div>
+      </section>
+    );
+  }
+
   return (
-    <div>
-      <h2>Shopping Cart</h2>
+    <section className="cart-section">
 
-      {cart.length === 0 ? (
-        <p>Your cart is empty.</p>
-      ) : (
-        <>
+      {/* Cart Header */}
+      <div className="cart-header">
+        <div>
+          <h2>Shopping Cart</h2>
+          <p>
+            {itemCount} {itemCount === 1 ? "item" : "items"} in your cart
+          </p>
+        </div>
+      </div>
+
+      <div className="cart-layout">
+
+        {/* Cart Items */}
+        <div className="cart-items">
+
           {cart.map((item) => (
-            <div key={item.id}>
-              <h3>{item.name}</h3>
+            <div className="cart-item" key={item.id}>
 
-              <p>Price: ₹{item.price}</p>
+              {/* Product Image */}
+              <div className="cart-product-image">
+                {item.image ? (
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                  />
+                ) : (
+                  <span>🛍️</span>
+                )}
+              </div>
 
-              <button onClick={() => onDecrease(item.id)}>
-                -
-              </button>
+              {/* Product Information */}
+              <div className="cart-product-info">
 
-              <span> {item.quantity} </span>
+                <span className="cart-product-category">
+                  {item.category || "Product"}
+                </span>
 
-              <button onClick={() => onIncrease(item.id)}>
-                +
-              </button>
+                <h3>{item.name}</h3>
 
-              <button onClick={() => onRemove(item.id)}>
-                Remove
-              </button>
+                <p className="cart-product-price">
+                  ₹{Number(item.price).toLocaleString("en-IN")}
+                </p>
 
-              <p>
-                Subtotal: ₹{item.price * item.quantity}
-              </p>
+                <button
+                  className="remove-button"
+                  onClick={() => onRemove(item.id)}
+                >
+                  Remove
+                </button>
+
+              </div>
+
+              {/* Quantity */}
+              <div className="quantity-control">
+
+                <button
+                  onClick={() => onDecrease(item.id)}
+                  aria-label="Decrease quantity"
+                >
+                  −
+                </button>
+
+                <span>{item.quantity}</span>
+
+                <button
+                  onClick={() => onIncrease(item.id)}
+                  aria-label="Increase quantity"
+                >
+                  +
+                </button>
+
+              </div>
+
+              {/* Item Total */}
+              <div className="cart-item-total">
+                ₹
+                {(
+                  Number(item.price) * item.quantity
+                ).toLocaleString("en-IN")}
+              </div>
+
             </div>
           ))}
 
-          <h3>Total: ₹{total}</h3>
-        </>
-      )}
-    </div>
+        </div>
+
+        {/* Order Summary */}
+        <aside className="order-summary">
+
+          <h3>Order Summary</h3>
+
+          <div className="summary-row">
+            <span>Subtotal</span>
+            <span>
+              ₹{total.toLocaleString("en-IN")}
+            </span>
+          </div>
+
+          <div className="summary-row">
+            <span>Delivery</span>
+            <span className="free-text">
+              FREE
+            </span>
+          </div>
+
+          <div className="summary-row">
+            <span>Taxes</span>
+            <span>Included</span>
+          </div>
+
+          <div className="summary-divider"></div>
+
+          <div className="summary-total">
+            <span>Total</span>
+            <strong>
+              ₹{total.toLocaleString("en-IN")}
+            </strong>
+          </div>
+
+          <button
+            className="checkout-button"
+            onClick={onCheckout}
+          >
+            Proceed to Checkout
+          </button>
+
+          <p className="secure-text">
+            Secure checkout • Your information is protected
+          </p>
+
+        </aside>
+
+      </div>
+
+    </section>
   );
 }
 
