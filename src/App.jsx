@@ -4,192 +4,42 @@ import Login from "./Login.jsx";
 import "./App.css";
 
 const initialProducts = [
-  {
-    id: 1,
-    name: "Wireless Headphones",
-    category: "Electronics",
-    price: 1499,
-    oldPrice: 2499,
-    rating: 4.5,
-    image:
-      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600",
-  },
-  {
-    id: 2,
-    name: "Smart Watch",
-    category: "Electronics",
-    price: 1999,
-    oldPrice: 2999,
-    rating: 4.4,
-    image:
-      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600",
-  },
-  {
-    id: 3,
-    name: "Running Shoes",
-    category: "Fashion",
-    price: 1299,
-    oldPrice: 1999,
-    rating: 4.3,
-    image:
-      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600",
-  },
-  {
-    id: 4,
-    name: "Casual Backpack",
-    category: "Fashion",
-    price: 899,
-    oldPrice: 1499,
-    rating: 4.2,
-    image:
-      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600",
-  },
-  {
-    id: 5,
-    name: "Digital Camera",
-    category: "Electronics",
-    price: 4999,
-    oldPrice: 6999,
-    rating: 4.6,
-    image:
-      "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600",
-  },
-  {
-    id: 6,
-    name: "Travel Backpack",
-    category: "Fashion",
-    price: 1199,
-    oldPrice: 1799,
-    rating: 4.1,
-    image:
-      "https://images.unsplash.com/photo-1622560480654-d96214fdc887?w=600",
-  },
-  {
-    id: 7,
-    name: "Sunglasses",
-    category: "Fashion",
-    price: 599,
-    oldPrice: 999,
-    rating: 4.0,
-    image:
-      "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=600",
-  },
-  {
-    id: 8,
-    name: "Perfume",
-    category: "Beauty",
-    price: 799,
-    oldPrice: 1299,
-    rating: 4.3,
-    image:
-      "https://images.unsplash.com/photo-1541643600914-78b084683601?w=600",
-  },
-  {
-    id: 9,
-    name: "Skin Care Set",
-    category: "Beauty",
-    price: 699,
-    oldPrice: 1099,
-    rating: 4.2,
-    image:
-      "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=600",
-  },
-  {
-    id: 10,
-    name: "Coffee Maker",
-    category: "Home",
-    price: 2499,
-    oldPrice: 3499,
-    rating: 4.5,
-    image:
-      "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600",
-  },
-  {
-    id: 11,
-    name: "Table Lamp",
-    category: "Home",
-    price: 899,
-    oldPrice: 1399,
-    rating: 4.1,
-    image:
-      "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600",
-  },
-  {
-    id: 12,
-    name: "Bluetooth Speaker",
-    category: "Electronics",
-    price: 1099,
-    oldPrice: 1699,
-    rating: 4.4,
-    image:
-      "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=600",
-  },
-  {
-    id: 13,
-    name: "Classic Watch",
-    category: "Fashion",
-    price: 1599,
-    oldPrice: 2399,
-    rating: 4.3,
-    image:
-      "https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=600",
-  },
-  {
-    id: 14,
-    name: "Desk Accessories",
-    category: "Home",
-    price: 499,
-    oldPrice: 799,
-    rating: 4.0,
-    image:
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600",
-  },
-  {
-    id: 15,
-    name: "Fitness Shoes",
-    category: "Fashion",
-    price: 1799,
-    oldPrice: 2599,
-    rating: 4.4,
-    image:
-      "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=600",
-  },
-  {
-    id: 16,
-    name: "Wireless Earbuds",
-    category: "Electronics",
-    price: 1299,
-    oldPrice: 1999,
-    rating: 4.5,
-    image:
-      "https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=600",
-  },
+  { id: 1, name: "Wireless Headphones", category: "Electronics", price: 1499, oldPrice: 2499, rating: 4.5, image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600" },
+  { id: 2, name: "Smart Watch", category: "Electronics", price: 1999, oldPrice: 2999, rating: 4.4, image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600" },
+  { id: 3, name: "Running Shoes", category: "Fashion", price: 1299, oldPrice: 1999, rating: 4.3, image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600" },
+  { id: 4, name: "Casual Backpack", category: "Fashion", price: 899, oldPrice: 1499, rating: 4.2, image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600" },
+  { id: 5, name: "Digital Camera", category: "Electronics", price: 4999, oldPrice: 6999, rating: 4.6, image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600" },
+  { id: 6, name: "Travel Backpack", category: "Fashion", price: 1199, oldPrice: 1799, rating: 4.1, image: "https://images.unsplash.com/photo-1622560480654-d96214fdc887?w=600" },
+  { id: 7, name: "Sunglasses", category: "Fashion", price: 599, oldPrice: 999, rating: 4.0, image: "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=600" },
+  { id: 8, name: "Perfume", category: "Beauty", price: 799, oldPrice: 1299, rating: 4.3, image: "https://images.unsplash.com/photo-1541643600914-78b084683601?w=600" },
+  { id: 9, name: "Skin Care Set", category: "Beauty", price: 699, oldPrice: 1099, rating: 4.2, image: "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=600" },
+  { id: 10, name: "Coffee Maker", category: "Home", price: 2499, oldPrice: 3499, rating: 4.5, image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600" },
+  { id: 11, name: "Table Lamp", category: "Home", price: 899, oldPrice: 1399, rating: 4.1, image: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600" },
+  { id: 12, name: "Bluetooth Speaker", category: "Electronics", price: 1099, oldPrice: 1699, rating: 4.4, image: "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=600" },
+  { id: 13, name: "Classic Watch", category: "Fashion", price: 1599, oldPrice: 2399, rating: 4.3, image: "https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=600" },
+  { id: 14, name: "Desk Accessories", category: "Home", price: 499, oldPrice: 799, rating: 4.0, image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600" },
+  { id: 15, name: "Fitness Shoes", category: "Fashion", price: 1799, oldPrice: 2599, rating: 4.4, image: "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=600" },
+  { id: 16, name: "Wireless Earbuds", category: "Electronics", price: 1299, oldPrice: 1999, rating: 4.5, image: "https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=600" },
 ];
 
 const slides = [
   {
     title: "Big Savings, Better Shopping!",
-    subtitle:
-      "Discover your favourite products at amazing prices.",
+    subtitle: "Discover your favourite products at amazing prices.",
     button: "Shop Now",
-    image:
-      "https://images.unsplash.com/photo-1607082349566-187342175e2f?auto=format&fit=crop&w=1400&q=85",
+    image: "https://images.unsplash.com/photo-1607082349566-187342175e2f?auto=format&fit=crop&w=1400&q=85",
   },
   {
     title: "Upgrade Your Lifestyle",
-    subtitle:
-      "Explore electronics, fashion and everyday essentials.",
+    subtitle: "Explore electronics, fashion and everyday essentials.",
     button: "Explore Products",
-    image:
-      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1400&q=85",
+    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1400&q=85",
   },
   {
     title: "Your Next Favourite Find",
-    subtitle:
-      "Find something special for every moment.",
+    subtitle: "Find something special for every moment.",
     button: "Discover More",
-    image:
-      "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=1400&q=85",
+    image: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=1400&q=85",
   },
 ];
 
@@ -208,13 +58,11 @@ const money = (amount) =>
     maximumFractionDigits: 0,
   }).format(amount);
 
-function ProductCard({
-  product,
-  onAdd,
-  onWishlist,
-  wished,
-  onView,
-}) {
+/* =========================================
+   PRODUCT CARD
+   ========================================= */
+
+function ProductCard({ product, onAdd, onWishlist, wished, onView }) {
   return (
     <article className="product-card">
       <div className="product-image-wrap">
@@ -229,9 +77,7 @@ function ProductCard({
           type="button"
           className={`wishlist-button ${wished ? "wished" : ""}`}
           onClick={() => onWishlist(product.id)}
-          aria-label={
-            wished ? "Remove from wishlist" : "Add to wishlist"
-          }
+          aria-label={wished ? "Remove from wishlist" : "Add to wishlist"}
         >
           {wished ? "♥" : "♡"}
         </button>
@@ -239,12 +85,8 @@ function ProductCard({
 
       <div className="product-info">
         <p className="product-category">{product.category}</p>
-
         <h3>{product.name}</h3>
-
-        <p className="product-rating">
-          ⭐ {product.rating} / 5
-        </p>
+        <p className="product-rating">⭐ {product.rating} / 5</p>
 
         <div className="product-prices">
           <strong>{money(product.price)}</strong>
@@ -265,7 +107,7 @@ function ProductCard({
             onClick={() => onAdd(product)}
             className="primary-button"
           >
-            Add to Cart
+            🛒 Add to Cart
           </button>
         </div>
       </div>
@@ -273,13 +115,11 @@ function ProductCard({
   );
 }
 
-function ProductGrid({
-  products,
-  onAdd,
-  onWishlist,
-  wishlist,
-  onView,
-}) {
+/* =========================================
+   PRODUCT GRID
+   ========================================= */
+
+function ProductGrid({ products, onAdd, onWishlist, wishlist, onView }) {
   if (products.length === 0) {
     return (
       <div className="empty-state">
@@ -305,11 +145,16 @@ function ProductGrid({
   );
 }
 
+/* =========================================
+   SHOPZONE APPLICATION
+   ========================================= */
+
 export default function App() {
   const [page, setPage] = useState("Home");
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("All");
   const [activeSlide, setActiveSlide] = useState(0);
+  const [isCarouselPaused, setIsCarouselPaused] = useState(false);
 
   const [wishlist, setWishlist] = useState([]);
   const [cart, setCart] = useState([]);
@@ -333,27 +178,40 @@ export default function App() {
     address: "",
   });
 
+  /* Automatically advance the carousel every four seconds. */
   useEffect(() => {
+    if (page !== "Home" || isCarouselPaused) {
+      return undefined;
+    }
+
     const timer = setInterval(() => {
       setActiveSlide((current) => (current + 1) % slides.length);
     }, 4000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [page, isCarouselPaused]);
 
+  /* Automatically dismiss notifications. */
   useEffect(() => {
-    if (!notice) return;
+    if (!notice) return undefined;
 
     const timer = setTimeout(() => setNotice(""), 3000);
     return () => clearTimeout(timer);
   }, [notice]);
 
+  /* Navigate to a page and return to the top. */
   const openPage = (nextPage) => {
     setPage(nextPage);
-    setSelectedProduct(null);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  /* Open the selected product's details. */
+  const viewProduct = (product) => {
+    setSelectedProduct(product);
+    openPage("ProductDetails");
+  };
+
+  /* Search and category filtering. */
   const filteredProducts = useMemo(() => {
     return initialProducts.filter((product) => {
       const matchesSearch =
@@ -367,11 +225,10 @@ export default function App() {
     });
   }, [search, category]);
 
+  /* Add a product or increase its quantity. */
   const addToCart = (product) => {
     setCart((current) => {
-      const existing = current.find(
-        (item) => item.id === product.id
-      );
+      const existing = current.find((item) => item.id === product.id);
 
       if (existing) {
         return current.map((item) =>
@@ -384,9 +241,10 @@ export default function App() {
       return [...current, { ...product, quantity: 1 }];
     });
 
-    setNotice(`${product.name} added to your cart.`);
+    setNotice(`${product.name} added to your cart successfully!`);
   };
 
+  /* Change quantity and remove items when quantity reaches zero. */
   const updateQuantity = (id, change) => {
     setCart((current) =>
       current
@@ -399,6 +257,7 @@ export default function App() {
     );
   };
 
+  /* Add or remove a product from the wishlist. */
   const toggleWishlist = (id) => {
     const alreadyWished = wishlist.includes(id);
 
@@ -409,17 +268,22 @@ export default function App() {
     );
 
     setNotice(
-      alreadyWished
-        ? "Removed from wishlist."
-        : "Added to wishlist."
+      alreadyWished ? "Removed from wishlist." : "Added to wishlist."
     );
   };
+
+  /* Calculate cart quantity and total price. */
+  const cartCount = cart.reduce(
+    (sum, item) => sum + item.quantity,
+    0
+  );
 
   const cartTotal = cart.reduce(
     (total, item) => total + item.price * item.quantity,
     0
   );
 
+  /* Place a demo order. */
   const placeOrder = (event) => {
     event.preventDefault();
 
@@ -445,6 +309,7 @@ export default function App() {
     openPage("Orders");
   };
 
+  /* Submit customer feedback. */
   const submitFeedback = (event) => {
     event.preventDefault();
 
@@ -460,34 +325,42 @@ export default function App() {
     };
 
     setFeedbackList((current) => [newFeedback, ...current]);
-
-    setFeedback({
-      name: "",
-      rating: "5",
-      message: "",
-    });
-
+    setFeedback({ name: "", rating: "5", message: "" });
     setNotice("Thank you! Your feedback has been submitted.");
   };
 
+  /* Shop Now button action. */
   const handleShopNow = () => {
     setCategory("All");
     setSearch("");
     openPage("Products");
   };
 
+  /* Props shared by product cards. */
   const productCardProps = {
     onAdd: addToCart,
     onWishlist: toggleWishlist,
     wishlist,
-    onView: (product) => {
-      setSelectedProduct(product);
-      openPage("ProductDetails");
-    },
+    onView: viewProduct,
+  };
+
+  /* Carousel navigation. */
+  const showPreviousSlide = () => {
+    setActiveSlide(
+      (current) => (current - 1 + slides.length) % slides.length
+    );
+  };
+
+  const showNextSlide = () => {
+    setActiveSlide((current) => (current + 1) % slides.length);
   };
 
   return (
     <div className="shopzone-app">
+      {/* =====================================
+          HEADER AND NAVIGATION
+          ===================================== */}
+
       <header className="shopzone-header">
         <button
           type="button"
@@ -529,24 +402,38 @@ export default function App() {
 
           <button
             type="button"
+            className={page === "Wishlist" ? "nav-active" : ""}
             onClick={() => openPage("Wishlist")}
           >
             ♥ Wishlist ({wishlist.length})
           </button>
 
-          <button type="button" onClick={() => openPage("Cart")}>
-            🛒 Cart ({cart.reduce((sum, item) => sum + item.quantity, 0)})
+          <button
+            type="button"
+            className={page === "Cart" ? "nav-active" : ""}
+            onClick={() => openPage("Cart")}
+          >
+            🛒 Cart ({cartCount})
           </button>
 
-          <button type="button" onClick={() => openPage("Login")}>
+          <button
+            type="button"
+            className={page === "Login" ? "nav-active" : ""}
+            onClick={() => openPage("Login")}
+          >
             {customer?.name || "Login"}
           </button>
         </nav>
       </header>
 
+      {/* =====================================
+          NOTIFICATION
+          ===================================== */}
+
       {notice && (
         <div className="shopzone-notice" role="status">
-          {notice}
+          <span>{notice}</span>
+
           <button
             type="button"
             onClick={() => setNotice("")}
@@ -558,42 +445,61 @@ export default function App() {
       )}
 
       <main className="shopzone-main">
+        {/* =====================================
+            HOME PAGE
+            CAROUSEL FIRST, THEN PRODUCTS
+            ===================================== */}
+
         {page === "Home" && (
           <>
-            <section className="shopzone-slider">
-              {slides.map((slide, index) => (
-                <div
-                  key={slide.title}
-                  className={`shopzone-slide ${
-                    activeSlide === index ? "active" : ""
-                  }`}
-                  style={{
-                    backgroundImage: `linear-gradient(90deg, rgba(0,0,0,.75), rgba(0,0,0,.1)), url("${slide.image}")`,
-                  }}
-                  aria-hidden={activeSlide !== index}
-                >
-                  <div className="shopzone-slide-content">
-                    <h1>{slide.title}</h1>
-                    <p>{slide.subtitle}</p>
-                    <button
-                      type="button"
-                      onClick={handleShopNow}
-                    >
-                      {slide.button}
-                    </button>
+            <section
+              className="shopzone-slider"
+              aria-label="Featured shopping offers"
+              onMouseEnter={() => setIsCarouselPaused(true)}
+              onMouseLeave={() => setIsCarouselPaused(false)}
+              onFocusCapture={() => setIsCarouselPaused(true)}
+              onBlurCapture={(event) => {
+                if (!event.currentTarget.contains(event.relatedTarget)) {
+                  setIsCarouselPaused(false);
+                }
+              }}
+            >
+              <div
+                className="shopzone-slides-track"
+                style={{
+                  transform: `translateX(-${activeSlide * 100}%)`,
+                }}
+              >
+                {slides.map((slide, index) => (
+                  <div
+                    key={slide.title}
+                    className="shopzone-slide"
+                    style={{
+                      backgroundImage: `linear-gradient(90deg, rgba(0,0,0,.75), rgba(0,0,0,.1)), url("${slide.image}")`,
+                    }}
+                    aria-hidden={activeSlide !== index}
+                  >
+                    <div className="shopzone-slide-content">
+                      <h1>{slide.title}</h1>
+                      <p>{slide.subtitle}</p>
+
+                      <button
+                        type="button"
+                        tabIndex={activeSlide === index ? 0 : -1}
+                        onClick={handleShopNow}
+                      >
+                        {slide.button}
+                      </button>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
 
               <button
                 type="button"
                 className="shopzone-arrow previous"
                 aria-label="Previous slide"
-                onClick={() =>
-                  setActiveSlide(
-                    (activeSlide - 1 + slides.length) % slides.length
-                  )
-                }
+                onClick={showPreviousSlide}
               >
                 ❮
               </button>
@@ -602,9 +508,7 @@ export default function App() {
                 type="button"
                 className="shopzone-arrow next"
                 aria-label="Next slide"
-                onClick={() =>
-                  setActiveSlide((activeSlide + 1) % slides.length)
-                }
+                onClick={showNextSlide}
               >
                 ❯
               </button>
@@ -616,50 +520,16 @@ export default function App() {
                     key={slide.title}
                     className={activeSlide === index ? "selected" : ""}
                     aria-label={`Show slide ${index + 1}`}
+                    aria-current={activeSlide === index ? "true" : undefined}
                     onClick={() => setActiveSlide(index)}
                   />
                 ))}
               </div>
             </section>
 
-            <section className="offer-section">
-              <h2>Special Offers Just for You!</h2>
-              <p>
-                Discover exciting deals across electronics, fashion,
-                beauty and home essentials.
-              </p>
-              <button
-                type="button"
-                className="primary-button"
-                onClick={handleShopNow}
-              >
-                Explore All Products
-              </button>
-            </section>
-
-            <section className="section-block">
-              <h2>Shop by Category</h2>
-
-              <div className="category-list">
-                {categories.map((item) => (
-                  <button
-                    type="button"
-                    key={item.name}
-                    className="category-card"
-                    onClick={() => {
-                      setCategory(item.name);
-                      openPage("Products");
-                    }}
-                  >
-                    <span>{item.emoji}</span>
-                    <strong>{item.name}</strong>
-                  </button>
-                ))}
-              </div>
-            </section>
-
             <section className="section-block">
               <h2>Popular Products</h2>
+
               <ProductGrid
                 products={initialProducts.slice(0, 8)}
                 {...productCardProps}
@@ -668,6 +538,7 @@ export default function App() {
 
             <section className="section-block">
               <h2>More to Explore</h2>
+
               <ProductGrid
                 products={initialProducts.slice(8)}
                 {...productCardProps}
@@ -675,6 +546,10 @@ export default function App() {
             </section>
           </>
         )}
+
+        {/* =====================================
+            PRODUCTS PAGE
+            ===================================== */}
 
         {page === "Products" && (
           <section className="section-block">
@@ -707,7 +582,11 @@ export default function App() {
           </section>
         )}
 
-        {page === "ProductDetails" && selectedProduct && (
+        {/* =====================================
+            PRODUCT DETAILS PAGE
+            ===================================== */}
+
+        {page === "ProductDetails" && (
           <section className="section-block product-details">
             <button
               type="button"
@@ -717,46 +596,70 @@ export default function App() {
               ← Back to Products
             </button>
 
-            <div className="product-detail-layout">
-              <img
-                src={selectedProduct.image}
-                alt={selectedProduct.name}
-              />
+            {selectedProduct ? (
+              <div className="product-detail-layout">
+                <img
+                  src={selectedProduct.image}
+                  alt={selectedProduct.name}
+                />
 
-              <div>
-                <p className="product-category">
-                  {selectedProduct.category}
-                </p>
-                <h1>{selectedProduct.name}</h1>
-                <p>⭐ {selectedProduct.rating} / 5</p>
-                <h2>{money(selectedProduct.price)}</h2>
-                <p>
-                  <del>{money(selectedProduct.oldPrice)}</del>
-                </p>
-                <p>
-                  Discover this product at SHOPZONE. Add it to your
-                  cart to continue shopping.
-                </p>
+                <div>
+                  <p className="product-category">
+                    {selectedProduct.category}
+                  </p>
+
+                  <h1>{selectedProduct.name}</h1>
+                  <p>⭐ {selectedProduct.rating} / 5</p>
+                  <h2>{money(selectedProduct.price)}</h2>
+
+                  <p>
+                    <del>{money(selectedProduct.oldPrice)}</del>
+                  </p>
+
+                  <p>
+                    Discover this product at SHOPZONE. Add it to your cart
+                    to continue shopping.
+                  </p>
+
+                  <button
+                    type="button"
+                    className="primary-button"
+                    onClick={() => addToCart(selectedProduct)}
+                  >
+                    🛒 Add to Cart
+                  </button>
+
+                  <button
+                    type="button"
+                    className="secondary-button"
+                    onClick={() => toggleWishlist(selectedProduct.id)}
+                  >
+                    {wishlist.includes(selectedProduct.id)
+                      ? "♥ Remove from Wishlist"
+                      : "♡ Add to Wishlist"}
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <div className="empty-state">
+                <h2>No product selected</h2>
+                <p>Please select a product to view its details.</p>
 
                 <button
                   type="button"
                   className="primary-button"
-                  onClick={() => addToCart(selectedProduct)}
+                  onClick={() => openPage("Products")}
                 >
-                  Add to Cart
-                </button>
-
-                <button
-                  type="button"
-                  className="secondary-button"
-                  onClick={() => toggleWishlist(selectedProduct.id)}
-                >
-                  ♡ Wishlist
+                  Explore Products
                 </button>
               </div>
-            </div>
+            )}
           </section>
         )}
+
+        {/* =====================================
+            WISHLIST PAGE
+            ===================================== */}
 
         {page === "Wishlist" && (
           <section className="section-block">
@@ -771,14 +674,19 @@ export default function App() {
           </section>
         )}
 
+        {/* =====================================
+            CART PAGE
+            ===================================== */}
+
         {page === "Cart" && (
           <section className="section-block">
-            <h1>Shopping Cart</h1>
+            <h1>Shopping Cart ({cartCount} items)</h1>
 
             {cart.length === 0 ? (
               <div className="empty-state">
                 <h2>Your cart is empty 🛒</h2>
                 <p>Explore our products and add your favourites.</p>
+
                 <button
                   type="button"
                   className="primary-button"
@@ -796,12 +704,13 @@ export default function App() {
 
                       <div className="cart-item-info">
                         <h3>{item.name}</h3>
-                        <p>{money(item.price)}</p>
+                        <p>{money(item.price)} each</p>
 
                         <div className="quantity-controls">
                           <button
                             type="button"
                             onClick={() => updateQuantity(item.id, -1)}
+                            aria-label={`Decrease ${item.name} quantity`}
                           >
                             −
                           </button>
@@ -811,6 +720,7 @@ export default function App() {
                           <button
                             type="button"
                             onClick={() => updateQuantity(item.id, 1)}
+                            aria-label={`Increase ${item.name} quantity`}
                           >
                             +
                           </button>
@@ -824,13 +734,15 @@ export default function App() {
                       <button
                         type="button"
                         className="remove-button"
-                        onClick={() =>
+                        onClick={() => {
                           setCart((current) =>
                             current.filter(
                               (product) => product.id !== item.id
                             )
-                          )
-                        }
+                          );
+
+                          setNotice(`${item.name} removed from your cart.`);
+                        }}
                       >
                         Remove
                       </button>
@@ -840,7 +752,7 @@ export default function App() {
 
                 <div className="cart-summary">
                   <h2>Order Summary</h2>
-                  <p>Items: {cart.reduce((sum, item) => sum + item.quantity, 0)}</p>
+                  <p>Total quantity: {cartCount}</p>
                   <h3>Total: {money(cartTotal)}</h3>
 
                   <button
@@ -848,13 +760,25 @@ export default function App() {
                     className="primary-button"
                     onClick={() => openPage("Checkout")}
                   >
-                    Proceed to Checkout
+                    Proceed to Checkout →
+                  </button>
+
+                  <button
+                    type="button"
+                    className="secondary-button"
+                    onClick={handleShopNow}
+                  >
+                    Continue Shopping
                   </button>
                 </div>
               </>
             )}
           </section>
         )}
+
+        {/* =====================================
+            CHECKOUT PAGE
+            ===================================== */}
 
         {page === "Checkout" && (
           <section className="section-block">
@@ -863,6 +787,7 @@ export default function App() {
             {cart.length === 0 ? (
               <div className="empty-state">
                 <p>Your cart is empty. Add products before checkout.</p>
+
                 <button
                   type="button"
                   className="primary-button"
@@ -873,15 +798,13 @@ export default function App() {
               </div>
             ) : (
               <div className="checkout-layout">
-                <form
-                  className="checkout-form"
-                  onSubmit={placeOrder}
-                >
+                <form className="checkout-form" onSubmit={placeOrder}>
                   <h2>Delivery Details</h2>
 
                   <label htmlFor="checkout-name">Full Name</label>
                   <input
                     id="checkout-name"
+                    type="text"
                     required
                     value={checkoutDetails.name}
                     onChange={(event) =>
@@ -908,7 +831,10 @@ export default function App() {
                     }
                   />
 
-                  <label htmlFor="checkout-address">Delivery Address</label>
+                  <label htmlFor="checkout-address">
+                    Delivery Address
+                  </label>
+
                   <textarea
                     id="checkout-address"
                     required
@@ -940,6 +866,7 @@ export default function App() {
                   ))}
 
                   <h3>Total: {money(cartTotal)}</h3>
+
                   <small>
                     This is a demo checkout. No real payment is taken.
                   </small>
@@ -949,6 +876,10 @@ export default function App() {
           </section>
         )}
 
+        {/* =====================================
+            ORDERS PAGE
+            ===================================== */}
+
         {page === "Orders" && (
           <section className="section-block">
             <h1>My Orders</h1>
@@ -957,6 +888,7 @@ export default function App() {
               <div className="empty-state">
                 <h2>No orders yet</h2>
                 <p>Your placed orders will appear here.</p>
+
                 <button
                   type="button"
                   className="primary-button"
@@ -971,9 +903,7 @@ export default function App() {
                   <article key={order.id} className="order-card">
                     <h2>Order #{order.id}</h2>
                     <p>{order.date}</p>
-                    <p>
-                      Customer: {order.customer.name}
-                    </p>
+                    <p>Customer: {order.customer.name}</p>
                     <p>Status: {order.status}</p>
 
                     {order.items.map((item) => (
@@ -990,22 +920,25 @@ export default function App() {
           </section>
         )}
 
+        {/* =====================================
+            FEEDBACK PAGE
+            ===================================== */}
+
         {page === "Feedback" && (
           <section className="section-block feedback-section">
             <div className="feedback-heading">
               <span>💬</span>
               <h1>We Value Your Feedback</h1>
+
               <p>
                 Tell us about your shopping experience. Your suggestions
                 help us improve SHOPZONE.
               </p>
             </div>
 
-            <form
-              className="feedback-form"
-              onSubmit={submitFeedback}
-            >
+            <form className="feedback-form" onSubmit={submitFeedback}>
               <label htmlFor="feedback-name">Your Name</label>
+
               <input
                 id="feedback-name"
                 type="text"
@@ -1021,6 +954,7 @@ export default function App() {
               />
 
               <label htmlFor="feedback-rating">Your Rating</label>
+
               <select
                 id="feedback-rating"
                 value={feedback.rating}
@@ -1038,9 +972,8 @@ export default function App() {
                 <option value="1">⭐ Poor</option>
               </select>
 
-              <label htmlFor="feedback-message">
-                Your Feedback
-              </label>
+              <label htmlFor="feedback-message">Your Feedback</label>
+
               <textarea
                 id="feedback-message"
                 placeholder="Share your suggestions or experience..."
@@ -1072,10 +1005,7 @@ export default function App() {
                 </div>
               ) : (
                 feedbackList.map((item) => (
-                  <article
-                    key={item.id}
-                    className="feedback-card"
-                  >
+                  <article key={item.id} className="feedback-card">
                     <div className="feedback-card-top">
                       <h3>{item.name}</h3>
                       <span>
@@ -1092,6 +1022,10 @@ export default function App() {
           </section>
         )}
 
+        {/* =====================================
+            LOGIN PAGE
+            ===================================== */}
+
         {page === "Login" && (
           <Login
             onBack={() => openPage("Home")}
@@ -1104,6 +1038,10 @@ export default function App() {
         )}
       </main>
 
+      {/* =====================================
+          FOOTER
+          ===================================== */}
+
       <footer className="shopzone-footer">
         <h2>SHOPZONE</h2>
         <p>Your everyday shopping destination.</p>
@@ -1112,12 +1050,15 @@ export default function App() {
           <button type="button" onClick={() => openPage("Home")}>
             Home
           </button>
+
           <button type="button" onClick={() => openPage("Products")}>
             Products
           </button>
+
           <button type="button" onClick={() => openPage("Orders")}>
             Orders
           </button>
+
           <button type="button" onClick={() => openPage("Feedback")}>
             Feedback
           </button>

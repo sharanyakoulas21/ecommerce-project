@@ -1,10 +1,10 @@
-
 import "./ProductCard.css";
 
 export default function ProductCard({
   product,
   onAddToCart,
   onToggleWishlist,
+  onView,
   isWishlisted = false,
 }) {
   if (!product) return null;
@@ -21,6 +21,14 @@ export default function ProductCard({
       onAddToCart(product);
     } else {
       console.error("Add to Cart function was not provided.");
+    }
+  };
+
+  const handleView = () => {
+    if (typeof onView === "function") {
+      onView(product);
+    } else {
+      console.error("View function was not provided.");
     }
   };
 
@@ -71,6 +79,14 @@ export default function ProductCard({
           onClick={handleAddToCart}
         >
           Add to Cart
+        </button>
+
+        <button
+          type="button"
+          className="catalogue-view"
+          onClick={handleView}
+        >
+          View
         </button>
       </div>
     </article>
