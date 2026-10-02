@@ -1,156 +1,89 @@
+
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import "./HeroSlider.css";
 
 const slides = [
   {
-    title: "Great deals.",
-    highlight: "Better choices.",
-    description:
-      "Discover everyday essentials, trending styles and technology for less.",
-    offer: "UP TO 40% OFF",
+    title: "Big Savings, Better Shopping!",
+    subtitle: "Discover your favourite products at amazing prices.",
     button: "Shop Now",
     image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1607082349566-187342175e2f?auto=format&fit=crop&w=1400&q=85",
   },
-
   {
-    title: "Upgrade your",
-    highlight: "everyday.",
-    description:
-      "Explore headphones, smart watches and gadgets made for your lifestyle.",
-    offer: "EXPLORE GADGETS",
-    button: "Explore Electronics",
+    title: "Upgrade Your Lifestyle",
+    subtitle: "Explore electronics, fashion and everyday essentials.",
+    button: "Explore Products",
     image:
-      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1400&q=85",
   },
-
   {
-    title: "Find your",
-    highlight: "next favourite.",
-    description:
-      "Refresh your wardrobe with styles and accessories for every day.",
-    offer: "NEW ARRIVALS",
-    button: "Explore Fashion",
+    title: "Your Next Favourite Find",
+    subtitle: "Great products for every moment.",
+    button: "Discover More",
     image:
-      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=1400&q=85",
   },
 ];
 
-function HeroSlider() {
+export default function HeroSlider({ onShopNow }) {
   const [active, setActive] = useState(0);
 
-  /* AUTOMATIC SLIDING */
   useEffect(() => {
     const timer = setInterval(() => {
-      setActive((current) => {
-        return (current + 1) % slides.length;
-      });
+      setActive((current) => (current + 1) % slides.length);
     }, 4000);
 
     return () => clearInterval(timer);
   }, []);
 
-  /* PREVIOUS */
-  const previousSlide = () => {
-    setActive((current) => {
-      return current === 0 ? slides.length - 1 : current - 1;
-    });
-  };
-
-  /* NEXT */
-  const nextSlide = () => {
-    setActive((current) => {
-      return (current + 1) % slides.length;
-    });
-  };
-
-  const slide = slides[active];
-
   return (
-    <section className="hero-slider">
-
-      {/* TEXT */}
-      <div className="hero-content">
-
-        <span className="hero-label">
-          SHOPZONE SPECIAL
-        </span>
-
-        <h1>
-          {slide.title}
-          <br />
-          <span>{slide.highlight}</span>
-        </h1>
-
-        <p>
-          {slide.description}
-        </p>
-
-        <strong className="hero-offer">
-          {slide.offer}
-        </strong>
-
-        <Link
-          to="/products"
-          className="hero-button"
+    <section className="shopzone-slider">
+      {slides.map((slide, index) => (
+        <div
+          key={slide.title}
+          className={`shopzone-slide ${
+            active === index ? "active" : ""
+          }`}
+          style={{ backgroundImage: `url("${slide.image}")` }}
+          aria-hidden={active !== index}
         >
-          {slide.button}
-          <span>→</span>
-        </Link>
+          <div className="shopzone-slide-content">
+            <h1>{slide.title}</h1>
+            <p>{slide.subtitle}</p>
+            <button onClick={onShopNow}>{slide.button}</button>
+          </div>
+        </div>
+      ))}
 
-      </div>
+      <button
+        className="shopzone-arrow previous"
+        onClick={() =>
+          setActive((active - 1 + slides.length) % slides.length)
+        }
+        aria-label="Previous slide"
+      >
+        &#10094;
+      </button>
 
-      {/* IMAGE */}
-      <div className="hero-image-area">
+      <button
+        className="shopzone-arrow next"
+        onClick={() => setActive((active + 1) % slides.length)}
+        aria-label="Next slide"
+      >
+        &#10095;
+      </button>
 
-        <img
-          key={slide.image}
-          src={slide.image}
-          alt={slide.title}
-          className="hero-image"
-        />
-
-        {/* PREVIOUS BUTTON */}
-        <button
-          className="hero-arrow hero-prev"
-          onClick={previousSlide}
-          aria-label="Previous slide"
-        >
-          ←
-        </button>
-
-        {/* NEXT BUTTON */}
-        <button
-          className="hero-arrow hero-next"
-          onClick={nextSlide}
-          aria-label="Next slide"
-        >
-          →
-        </button>
-
-      </div>
-
-      {/* DOTS */}
-      <div className="hero-dots">
-
-        {slides.map((item, index) => (
+      <div className="shopzone-dots">
+        {slides.map((slide, index) => (
           <button
-            key={item.title}
-            className={
-              index === active
-                ? "hero-dot active"
-                : "hero-dot"
-            }
+            key={slide.title}
+            className={active === index ? "selected" : ""}
             onClick={() => setActive(index)}
-            aria-label={`Go to slide ${index + 1}`}
+            aria-label={`Show slide ${index + 1}`}
           />
         ))}
-
       </div>
-
     </section>
   );
 }
-
-export default HeroSlider;
