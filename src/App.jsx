@@ -103,7 +103,9 @@ function ProductCard({ product, onAdd, onWishlist, wished, onView }) {
           </button>
 
           <button
-            type="button"
+            type="button"onClick={() => {
+  setPage("Login");
+}}
             onClick={() => onAdd(product)}
             className="primary-button"
           >
@@ -227,6 +229,7 @@ export default function App() {
 
   /* Add a product or increase its quantity. */
   const addToCart = (product) => {
+    setPage("Login");
     setCart((current) => {
       const existing = current.find((item) => item.id === product.id);
 

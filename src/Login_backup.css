@@ -1,0 +1,518 @@
+.shop-login {
+  min-height: 100vh;
+  padding: 0 6%;
+  color: #20243a;
+  background:
+    radial-gradient(circle at 8% 15%, #e5eaff 0, transparent 28%),
+    radial-gradient(circle at 92% 80%, #ffe8dc 0, transparent 25%),
+    #f8f9ff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.shop-login * {
+  box-sizing: border-box;
+}
+
+.shop-login-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 24px 0;
+  border-bottom: 1px solid #e8e9f2;
+}
+
+.shop-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0;
+  color: #25294b;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.shop-brand-icon {
+  display: grid;
+  width: 45px;
+  height: 45px;
+  place-items: center;
+  color: white;
+  background: linear-gradient(135deg, #635bff, #8b5cf6);
+  border-radius: 13px;
+}
+
+.shop-brand-highlight {
+  color: #6d5dfc;
+}
+
+.shop-brand small {
+  display: block;
+  margin-top: 4px;
+  color: #777c92;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.shop-home-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  color: #555a74;
+  background: white;
+  border: 1px solid #e4e6f0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.25s, color 0.25s;
+}
+
+.shop-home-link:hover {
+  color: #635bff;
+  background: #f0efff;
+}
+
+.shop-login-content {
+  display: grid;
+  grid-template-columns: 1fr 440px;
+  align-items: center;
+  gap: 8%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 65px 0;
+}
+
+.shop-promo {
+  padding: 20px 0;
+}
+
+.shop-promo-tag {
+  display: inline-block;
+  padding: 9px 13px;
+  color: #6255e8;
+  background: #e9e7ff;
+  border-radius: 30px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.shop-promo h1 {
+  margin: 24px 0 18px;
+  color: #242641;
+  font-size: clamp(38px, 5vw, 60px);
+  line-height: 1.12;
+  letter-spacing: -2px;
+}
+
+.shop-promo h1 span {
+  color: #6c5ce7;
+}
+
+.shop-promo-description {
+  max-width: 440px;
+  color: #72778c;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.shop-promo-benefits {
+  display: grid;
+  gap: 22px;
+  margin-top: 35px;
+}
+
+.shop-promo-benefit {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.shop-benefit-icon {
+  display: grid;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  color: #6b5ce7;
+  background: white;
+  border: 1px solid #eeecff;
+  border-radius: 14px;
+  box-shadow: 0 5px 20px #28285b08;
+}
+
+.shop-promo-benefit strong {
+  color: #292d49;
+  font-size: 14px;
+}
+
+.shop-promo-benefit p {
+  margin: 5px 0 0;
+  color: #85899c;
+  font-size: 13px;
+}
+
+.shop-promo-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 35px;
+  color: #676d83;
+  font-size: 13px;
+}
+
+.shop-promo-note svg {
+  color: #2ca77a;
+}
+
+.shop-login-card {
+  padding: 36px;
+  background: white;
+  border: 1px solid #ececf5;
+  border-radius: 22px;
+  box-shadow: 0 20px 60px #30305b0d;
+}
+
+.shop-card-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #6b5ce7;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.shop-card-icon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  color: white;
+  background: linear-gradient(135deg, #6c5ce7, #9c65ed);
+  border-radius: 15px;
+}
+
+.shop-login-card h2 {
+  margin: 24px 0 8px;
+  color: #272943;
+  font-size: 27px;
+  letter-spacing: -0.6px;
+}
+
+.shop-login-subtitle {
+  margin: 0 0 28px;
+  color: #85899b;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.shop-login-card form > label,
+.shop-password-heading label {
+  display: block;
+  margin-bottom: 9px;
+  color: #343750;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.shop-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 49px;
+  margin-bottom: 22px;
+  padding: 0 14px;
+  color: #9699ad;
+  background: #fbfbfe;
+  border: 1px solid #e5e6f0;
+  border-radius: 10px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.shop-input-wrap:focus-within {
+  border-color: #7868ef;
+  box-shadow: 0 0 0 3px #7868ef18;
+}
+
+.shop-input-wrap input {
+  width: 100%;
+  min-width: 0;
+  padding: 14px 0;
+  color: #292d49;
+  background: transparent;
+  border: none;
+  outline: none;
+  font: inherit;
+  font-size: 13px;
+}
+
+.shop-input-wrap input::placeholder {
+  color: #a5a8b8;
+}
+
+.shop-password-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.shop-forgot-button {
+  margin-bottom: 9px;
+  padding: 0;
+  color: #6b5ce7;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.shop-forgot-button:hover {
+  text-decoration: underline;
+}
+
+.shop-eye-button {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  padding: 4px;
+  color: #85899c;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.shop-eye-button:hover {
+  color: #6b5ce7;
+}
+
+.shop-remember {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: -4px 0 24px;
+  color: #72778b;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.shop-remember input {
+  width: 15px;
+  height: 15px;
+  accent-color: #6b5ce7;
+  cursor: pointer;
+}
+
+.shop-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 49px;
+  color: white;
+  background: linear-gradient(110deg, #635bff, #895cf6);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 7px 18px #6c5ce733;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.shop-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px #6c5ce744;
+}
+
+.shop-submit:active {
+  transform: translateY(0);
+}
+
+.shop-login-message {
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 9px;
+  font-size: 12px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.shop-login-message.error {
+  color: #b42332;
+  background: #fff0f1;
+  border: 1px solid #ffd9dd;
+}
+
+.shop-login-message.success {
+  color: #176b47;
+  background: #eaf9f0;
+  border: 1px solid #c7eed8;
+}
+
+.shop-login-message.info {
+  color: #4f49a1;
+  background: #f0efff;
+  border: 1px solid #dedbff;
+}
+
+.shop-or {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 27px 0 20px;
+}
+
+.shop-or span {
+  flex: 1;
+  height: 1px;
+  background: #ececf3;
+}
+
+.shop-or p {
+  margin: 0;
+  color: #a0a2b2;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.shop-create-account {
+  width: 100%;
+  min-height: 46px;
+  color: #6556df;
+  background: #f3f1ff;
+  border: 1px solid #e8e4ff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+  transition: background 0.2s;
+}
+
+.shop-create-account:hover {
+  background: #e9e5ff;
+}
+
+.shop-card-benefits {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid #f0f0f6;
+}
+
+.shop-card-benefits div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #8b8fa1;
+  font-size: 10px;
+}
+
+.shop-card-benefits svg {
+  color: #7b6be8;
+}
+
+.shop-login-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 20px 0;
+  color: #9396a8;
+  border-top: 1px solid #e8e9f2;
+  font-size: 11px;
+}
+
+@media (max-width: 850px) {
+  .shop-login {
+    padding: 0 5%;
+  }
+
+  .shop-login-content {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    max-width: 500px;
+    padding: 40px 0;
+  }
+
+  .shop-promo {
+    padding: 0;
+  }
+
+  .shop-promo h1 {
+    font-size: 43px;
+  }
+
+  .shop-promo-benefits {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .shop-login-card {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .shop-login-header {
+    padding: 17px 0;
+  }
+
+  .shop-brand {
+    gap: 8px;
+    font-size: 18px;
+  }
+
+  .shop-brand-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .shop-brand small {
+    font-size: 9px;
+  }
+
+  .shop-home-link {
+    gap: 5px;
+    padding: 9px;
+    font-size: 11px;
+  }
+
+  .shop-promo h1 {
+    font-size: 37px;
+  }
+
+  .shop-login-card {
+    padding: 23px 18px;
+    border-radius: 17px;
+  }
+
+  .shop-login-card h2 {
+    font-size: 23px;
+  }
+
+  .shop-card-benefits {
+    gap: 12px;
+  }
+
+  .shop-card-benefits div {
+    font-size: 9px;
+  }
+
+  .shop-login-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
